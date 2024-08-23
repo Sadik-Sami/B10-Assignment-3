@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html
+  lang="en"
+  data-theme="corporate"
+>
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -24,6 +27,11 @@
       src="https://kit.fontawesome.com/33fb43d274.js"
       crossorigin="anonymous"
     ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -31,16 +39,146 @@
           extend: {
             colors: {
               clifford: "#da373d",
+              accent_green_dark: "#ABEF5F",
+              accent_green_light: "rgba(171, 239, 95, 0.50)",
             },
             fontFamily: {
               manrope: ["Manrope", "sans-serif"],
             },
           },
         },
+        daisiui: {
+          themes: ["light", "dark", "corporate"],
+        },
       };
     </script>
   </head>
   <body>
-    <h1 class="text-7xl font-manrope">Hello</h1>
+    <header class="bg-gradient-to-b from-gray-100 h-[90vh]">
+      <div class="navbar max-w-screen-xl mx-auto font-manrope">
+        <div class="navbar-start">
+          <svg
+            width="33"
+            height="33"
+            viewBox="0 0 33 33"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              x="0.0106201"
+              y="0.0522461"
+              width="32"
+              height="32"
+              rx="16"
+              transform="rotate(0.019056 0.0106201 0.0522461)"
+              fill="#ABEF5F"
+            />
+            <path
+              d="M21.007 11.0593L10.0033 22.0557"
+              stroke="#1C1C1C"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <path
+              d="M15.0073 10.1887C15.0073 10.1887 20.6409 9.71565 21.4957 10.5708C22.3503 11.426 21.8734 17.0594 21.8734 17.0594"
+              stroke="#1C1C1C"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <a class="btn btn-ghost text-xl font-extrabold">Rinterio</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#blogs">Blogs</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <div class="md:flex gap-4 justify-center items-center hidden">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <button class="flex items-center gap-2 bg-accent_green_dark rounded-3xl px-3 py-1">
+              <p>Book Consult</p>
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 33 33"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="0.0146027"
+                  y="0.0957031"
+                  width="32"
+                  height="32"
+                  rx="16"
+                  transform="rotate(0.019056 0.0146027 0.0957031)"
+                  fill="#1C1C1C"
+                />
+                <path
+                  d="M21.0109 11.1028L10.0073 22.0991"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M15.0112 10.2321C15.0112 10.2321 20.6449 9.7591 21.4996 10.6143C22.3542 11.4695 21.8773 17.1029 21.8773 17.1029"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="md:hidden flex">
+            <div class="dropdown dropdown-end">
+              <div
+                tabindex="0"
+                role="button"
+                class="bg-white m-1"
+              >
+                <i class="fa-solid fa-bars"></i>
+              </div>
+              <ul
+                tabindex="0"
+                class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
+              >
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#blogs">Blogs</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- hero -->
+      <section class="max-w-screen-xl mx-auto ">
+        <div class="mx-3 pb-14">
+            <img class="mx-auto" src="assets/banner.png" alt="">
+            <h1 class="text-2xl lg:text-5xl max-w-[55rem] mx-auto text-center font-bold">A barn house of this design
+                has a striking appearance</h1>
+            <p class="text-center my-4 text-sm lg:my-7 lg:max-w-[47rem] mx-auto">The barn house captivates with its
+                blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents, and
+                large windows that flood the space with natural light.</p>
+            <div class="text-center">
+                <button class="btn  lg:w-auto text-lg bg-accent_green_light rounded-full border-lime-300">View Details
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                        class="size-8 bg-lime-300 rounded-full p-1">
+                        <path fill-rule="evenodd"
+                            d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z"
+                            clip-rule="evenodd" />
+                    </svg></button>
+            </div>
+        </div>
+    </section>
+    </header>
   </body>
 </html>
